@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+/* Global styles */
+
+@import 'assets/sass/main.scss';
+
+
+:root {
+  --tw-ring-offset-shadow:  0 0 #0000; /* Valid color with transparency */
+  --tw-ring-shadow: 0 0 #0000; /* Adjusted shadow size and color */
+  --tw-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1); /* Existing shadow properties */
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", "Roboto Condensed", sans-serif !important;
+}
+
+//   .sticky-header {
+//     position: fixed;
+//     top: -100px;
+//     width: 100%;
+//     z-index: 1000;
+//     background-color: #333;
+//     transition: top 0.3s ease-in-out;
+//   }
+//   .sticky-header.sticky {
+//     top: 0;
+//   }

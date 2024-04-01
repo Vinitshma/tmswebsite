@@ -1,0 +1,98 @@
+<section id="app_ly">
+    <div class="auto-container">
+        <div class="bck_app">
+            <i class="fa fa-long-arrow-left"></i>
+            <a (click)="backCareer()">Back to Job Posting</a>
+        </div>
+        <div class="">
+            <h3>{{jobTitle}}</h3>
+            <p>To apply for this position, please provide the following details.</p>
+            <div class="inner_content">
+                <form [formGroup]="candidateForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-2">
+                            <label>Full name</label>
+                            <input type="text" formControlName="fullName" maxlength="50" minlength="3" required
+                            [ngClass]="{'is-invalid': submitted && frm['fullName'].errors && (frm['fullName'].dirty || frm['fullName'].touched)}">
+                            <div class="text-danger" *ngIf="submitted || frm['fullName'].invalid && (frm['fullName'].dirty || frm['fullName'].touched)">
+                                <div *ngIf="frm['fullName'].errors?.['required']">This field is required.</div>
+                                <span *ngIf="frm['fullName'].errors?.['minlength']">Must contain 3 character.</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <label>DOB</label>
+                            <input type="date" required  formControlName="dob" [min]="minDate | date:'yyyy-MM-dd'" [max]="maxDate | date:'yyyy-MM-dd'" (keydown)="$event.preventDefault()">
+                            <div class="text-danger" *ngIf="submitted || frm['dob'].invalid && (frm['dob'].dirty || frm['dob'].touched)">
+                                <div *ngIf="frm['dob'].errors?.['required']">This field is required.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-2">
+                            <label for="gender">Gender</label>
+                            <select formControlName="gender">
+                                <option value="">Select Option</option>
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
+                                <option value="O">Other</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <label>Phone</label>
+                            <input type="tel" formControlName="phone" minlength="10" maxlength="10"
+                            [ngClass]="{'is-invalid': submitted && frm['phone'].errors && (frm['phone'].dirty || frm['phone'].touched)}">
+                            <div class="text-danger" *ngIf="submitted || frm['phone'].invalid && (frm['phone'].dirty || frm['phone'].touched)">
+                                <div *ngIf="frm['phone'].errors?.['required']">This field is required.</div>
+                                <span *ngIf="frm['phone'].errors?.['minlength']">Must contain 10 digit number.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 mb-2">
+                            <label>E-mail</label>
+                            <input type="email" formControlName="eMail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [ngClass]="{'is-invalid': submitted && frm['eMail'].errors && (frm['eMail'].dirty || frm['eMail'].touched)}">
+                            <div class="text-danger" *ngIf="submitted || frm['eMail'].invalid && (frm['eMail'].dirty || frm['eMail'].touched)">
+                                <div *ngIf="frm['eMail'].errors?.['required']">This field is required.</div>
+                                <span *ngIf="frm['eMail'].errors?.['pattern']">Ex. abc@email.com</span>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-2">
+                            <label>Address</label>
+                            <textarea formControlName="address" maxlength="500" minlength="12"></textarea>
+                            <div class="text-danger" *ngIf="submitted || frm['address'].invalid && (frm['address'].dirty || frm['address'].touched)">
+                                <div *ngIf="frm['address'].errors?.['required']">This field is required.</div>
+                                <span *ngIf="frm['address'].errors?.['minlength']">Must contain 12 character min.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-2">
+                            <label>Explain about yourself</label>
+                            <textarea formControlName="abtYourself" maxlength="500" minlength="12"></textarea>
+                            <div class="text-danger" *ngIf="submitted || frm['abtYourself'].invalid && (frm['abtYourself'].dirty || frm['abtYourself'].touched)">
+                                <div *ngIf="frm['abtYourself'].errors?.['required']">This field is required.</div>
+                                <span *ngIf="frm['abtYourself'].errors?.['minlength']">Must contain 12 character min.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-2">
+                            <label>Cover letter</label>
+                            <textarea formControlName="coverLetter" maxlength="500" minlength="12"></textarea>
+                            <div class="text-danger" *ngIf="submitted || frm['coverLetter'].invalid && (frm['coverLetter'].dirty || frm['coverLetter'].touched)">
+                                <div *ngIf="frm['coverLetter'].errors?.['required']">This field is required.</div>
+                                <span *ngIf="frm['coverLetter'].errors?.['minlength']">Must contain 12 character min.</span>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-2">
+                            <label>Resume</label>
+                            <input type="file" accept=".pdf, .docx" (change)="onFileSelected($event)">
+                            <div class="text-danger" *ngIf="resumeRequired">This field is required.</div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <div class="theme_btn_all color_one">
+                            <a class="theme-btn five" (click)="submitForm()">Submit Application</a>
+                         </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,67 @@
+<div class="contact_us">
+    <div class="auto-container">
+        <div class="row">
+            <div class="col-md-6 col-12 bck_left" style="margin-bottom: 40px;">
+                <h3 class="">Contact Us</h3>
+                <p>Let us know how we can help.</p>
+                <div class="call-us">
+                    <h6>Call us</h6>
+                    <p>+91-9092374874</p>
+                </div>
+                <div class="Email-Us">
+                    <h6>Email us</h6>
+                    <p>abc@gmail.com</p>
+                </div>
+                <div class="Our-Address">
+                    <h6>Our address</h6>
+                    <p>8th & 10th Floor, Prince Info City I, 286/1, Rajiv <br> Gandhi Salai, Nehru Nagar, Perungudi, Chennai,<br> Tamilnadu - 600096</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-12" style="margin-bottom: 55px;">
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                    <div class="mb-2">
+                        <label>Name <em class="text-danger">(Required)</em></label>
+                        <input type="text" formControlName="name" maxlength="50" minlength="3">
+                        <div class="text-danger" *ngIf="submitted || frm['name'].invalid && (frm['name'].dirty || frm['name'].touched)">
+                            <div *ngIf="frm['name'].errors?.['required']">This field is required.</div>
+                            <span *ngIf="frm['name'].errors?.['minlength']">Must contain 3 character min.</span>
+                        </div>
+                    </div>
+                    
+                    <!-- <label>Excel Upload</label>
+                    <input type="file" (change)="readExcel($event)"> -->
+                    
+                    <div class="mb-2">
+                        <label>Email <em class="text-danger">(Required)</em></label>
+                        <input type="email" formControlName="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        <div class="text-danger" *ngIf="submitted || frm['email'].invalid && (frm['email'].dirty || frm['email'].touched)">
+                            <div *ngIf="frm['email'].errors?.['required']">This field is required.</div>
+                            <span *ngIf="frm['email'].errors?.['pattern']">Ex. abc@email.com</span>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <label>Message <em class="text-danger">(Required)</em></label>
+                        <textarea formControlName="message"  maxlength="500" minlength="12"></textarea>
+                        <div class="text-danger" *ngIf="submitted || frm['message'].invalid && (frm['message'].dirty || frm['message'].touched)">
+                            <div *ngIf="frm['message'].errors?.['required']">This field is required.</div>
+                            <span *ngIf="frm['message'].errors?.['minlength']">Must contain 12 character min.</span>
+                        </div>
+                    </div>
+
+                    <div class="my-3">
+                        <ngx-recaptcha2 [siteKey]="sitekey" (success)="handleCaptcha($event)"></ngx-recaptcha2>
+                    </div>
+    
+                    <div class="d-flex justify-content-end">
+                        <div class="theme_btn_all color_one">
+                            <a class="btn theme-btn five" (click)="onSubmit()">Submit</a>
+                         </div>
+                    </div>
+                  </form>
+            </div>
+            <div class="col-12">
+                <div id="basic_map" class="mt-2" style="width: 100%; height: 280px; border-radius: 12px;"></div>
+            </div>
+        </div>
+    </div>
+</div>

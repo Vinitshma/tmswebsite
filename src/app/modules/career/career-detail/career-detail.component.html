@@ -1,0 +1,35 @@
+<section id="cr_detail">
+    <div class="bg_top">
+        <div class="bg_img" style="background-image: url(../../../../assets/images/img/ai-brain.jpg);"></div>
+    </div>
+    <div class="auto-container">
+        <div class="content_inner">
+            <h3 class="mb-2">{{jobdetails?.JobTitle}}</h3>
+            <button class="btn btn-primary" (click)="applyPost()">Apply</button>
+            <hr>
+            <div class="">
+                <div class="pos_detail">
+                    <p>
+                        <i class="fa fa-map-marker" style="padding-right: 4px;" aria-hidden="true"></i>
+                        <span>{{jobdetails?.Locations}}</span>
+                    </p>
+                    <p>
+                        <i class="fa fa-suitcase" aria-hidden="true"></i>
+                        <span>{{jobdetails?.EmploymentType}}</span>
+                    </p>
+                    <p>
+                        <i class="fa fa-clock" aria-hidden="true"></i>
+                        <span>Posted on {{jobdetails?.PostingDate | date:'dd-MM-yyyy'}}</span>
+                    </p>
+                    <p>TMS{{jobdetails?.JobID}}C</p>
+                </div>
+                <div class="">
+                    <h5 class="pos_heading">Job Description</h5>
+                    <div class="px-2">
+                        <div class="" [innerHTML]="jobdetails?.JobDescription"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

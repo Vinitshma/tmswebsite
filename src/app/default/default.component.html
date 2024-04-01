@@ -1,0 +1,269 @@
+<body [ngClass]="{ 'fixed-header floating-menu': isSticky}">
+    <nav class="header_area" id="header_contents">
+        <header [ngClass]="{'transparent-bg': isHomeRoute}" class="header header_default style_seven style_eight head_absolute  get_sticky_header">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                <div class="col-xxl-6 col-xl-4 col-lg-2 col-md-8 col-sm-8 col-xs-8 logo_column">
+                    <div class="header_logo_box">
+                        <a class="logo navbar-brand" routerLink="">
+                            <img src="/assets/images/logo/TMS-logo.png" alt="tms" class="logo_default">
+                            <img src="/assets/images/logo/TMS-logo.png" alt="tms" class="logo__sticky">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-6 col-xl-8 col-lg-6 col-md-1 col-sm-1 col-xs-1 menu_column">
+                    <div class="navbar_togglers hamburger_menu">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="header_content_collapse">
+                        <div class="header_menu_box">
+                            <div class="navigation_menu">
+                            <ul id="myNavbar" class="navbar_nav" style="text-align: end;">
+                                <li
+                                    class="menu-item nav-item">
+                                    <a routerLink="/home" routerLinkActive="active" class="nav-link">
+                                        <span>Home</span>
+                                    </a>
+                                </li>
+                                <li
+                                    class="menu-item nav-item">
+                                    <a routerLink="/product" class="nav-link">
+                                        <span>Products</span>
+                                    </a>
+                                </li>
+                                <li
+                                    class="menu-item nav-item">
+                                    <a routerLink="/solution" class="nav-link">
+                                        <span>Solutions</span>
+                                    </a>
+                                </li>
+                                <li
+                                    class="menu-item nav-item">
+                                    <a routerLink="/career" routerLinkActive="active" class="nav-link">
+                                        <span>Career</span>
+                                    </a>
+                                </li>
+                                <li id="menu_toggle" class="menu-item menu-item-has-children dropdown nav-item">
+                                    <a class="dropdown-toggle nav-link">
+                                        <span>Company</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="menu-item  nav-item">
+                                            <a routerLink="/about" class="dropdown-item nav-link">
+                                                <span>About</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item nav-item">
+                                            <a class="dropdown-item nav-link">
+                                                <span>Events</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item  nav-item">
+                                            <a routerLink="/contact" class="dropdown-item nav-link">
+                                                <span>Contact Us</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-3 col-sm-3 col-xs-3 right_column">
+                    <div class="header_right_content">
+                        <ul>
+                            <li>
+                            <a rel="nofollow" class="login d-flex"><i class="fa fa-user"></i> Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> -->
+                </div>
+            </div>
+        </header>
+    </nav>
+
+    <router-outlet></router-outlet>
+    
+    <footer class="footer_area footer_seven bg_dark_2" style="padding-top: 35px;" id="footer_contents">
+        <div class="footer_widgets_wrap">
+           <div class="auto-container">
+              <div class="row">
+                 <div class="col-xl-4 col-lg-12 col-md-6 col-sm-12 mb-sm-5 mb-md-5 mb-lg-5 mb-xl-0">
+                    <div class="footer_widgets about_company light_color">
+                       <div class="about_company_inner">
+                          <div class="footer_logo">
+                             <a>
+                                <img src="/assets/images/logo/TMS-logo.png" alt="logo" />
+                             </a>
+                          </div>
+                          <div class="pd_bottom_30"></div>
+                          <div class="about_sec">
+                            <p style="color: var(--text-color-light);">Creating purposeful technology that reinvents the world for good.</p> 
+                            <p style="color: var(--text-color-light);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, natus porro aspernatur debitis saepe animi eius enim rerum! Ad, accusamus. </p></div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12 mb-sm-5 mb-md-5 mb-lg-0 mb-xl-0">
+                    <div class="footer_widgets wid_tit style_one">
+                       <div class="fo_wid_title">
+                          <h2>Offices</h2>
+                       </div>
+                       <div class="pd_bottom_10"></div>
+                    </div>
+                    <div class="footer_widgets get_in_touch_foo light_color">
+                       <div class="get_intouch_inrfo">
+                          <div class="foo_cont_inner">
+                             <div class="top">
+                                <h6>Head Office</h6>
+                                <p> NO.5/79, Srinivasa Perumal Koil Street, Sadhanadhapuram, Irandam Kattalai, Chennai, Tamilnadu - 600069
+                                </p>
+                             </div>
+                             <div class="top">
+                                <h6>Corporate Office</h6>
+                                <p>8th & 10th Floor, Prince Info City I, 286/1, Rajiv Gandhi Salai, Nehru Nagar, Perungudi, Chennai, Tamilnadu - 600096
+                                </p>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 mb-sm-5 mb-md-0 mb-lg-0 mb-xl-0">
+                    <div class="footer_widgets wid_tit style_one">
+                       <div class="fo_wid_title">
+                          <h2>Products</h2>
+                       </div>
+                       <div class="pd_bottom_10"></div>
+                    </div>
+                    <div class="footer_widgets clearfix navigation_foo light_color style_one">
+                       <div class="navigation_foo_box">
+                          <div class="navigation_foo_inner">
+                             <div class="menu-company-container">
+                                <ul id="menu-company" class="menu">
+                                   <li><a>Vanigan</a></li>
+                                   <li><a>Spokeny</a></li>
+                                </ul>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 mb-sm-5 mb-md-0 mb-lg-0 mb-xl-0">
+                    <div class="footer_widgets wid_tit style_one">
+                       <div class="fo_wid_title">
+                          <h2>Company</h2>
+                       </div>
+                       <div class="pd_bottom_10"></div>
+                    </div>
+                    <div class="footer_widgets clearfix navigation_foo light_color style_one">
+                       <div class="navigation_foo_box">
+                          <div class="navigation_foo_inner">
+                             <div class="menu-company-container">
+                                <ul id="menu-company" class="menu">
+                                   <li><a routerLink="/home">Home</a></li>
+                                   <li><a  routerLink="/about">About Us</a></li>
+                                   <li><a routerLink="/career">Careers</a></li>
+                                   <li><a>Events</a></li>
+                                   <li><a>Our Capabilities</a></li>
+                                   <li><a routerLink="/contact">Contact Us</a></li>
+                                </ul>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        
+        <div class="pd_bottom_50"></div>
+        <div class="footer-copyright" style="background: var(--menu-color1);">
+           <div class="divider_w_1"></div>
+           <div class="pd_top_20"></div>
+           <div class="auto-container">
+              <div class="row align-items-center">
+                 <div class="col-lg-6 col-md-12 mb-3 mb-lg-0 mb-xl-0">
+                    <div class="footer_copy_content color_white">
+                       © 2024 Thirumoolar | All Rights Reserved.
+                    </div>
+                 </div>
+                 <div class="col-lg-6 col-md-12">
+                    <div class="nav_link_v_one text-md-end">
+                       <ul>
+                          <li>
+                             <a class="color_white" target="_blank" rel="nofollow">Terms Of Use</a>
+                          </li>
+                          <li>
+                             <a class="color_white" target="_blank" rel="nofollow">Privacy Policy</a>
+                          </li>
+                       </ul>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           
+           <div class="pd_bottom_20"></div>
+           
+        </div>
+    </footer>
+
+    <div class="crt_mobile_menu">
+        <div class="menu-backdrop"></div>
+        <nav class="menu-box">
+            <div class="close-btn"><i class="fa fa-times"></i></div>
+            <div class="menu-outer">
+                <!-- <ul id="myNavbar" class="navbar_nav">
+                    <li class="menu-item nav-item">
+                        <a routerlink="/home" routerlinkactive="active" class="nav-link active">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="menu-item nav-item">
+                        <a href="index.html" class="nav-link">
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li class="menu-item nav-item">
+                        <a href="index.html" class="nav-link">
+                            <span>Solutions</span>
+                        </a>
+                    </li>
+                    <li class="menu-item nav-item">
+                        <a routerlink="/career" routerlinkactive="active" class="nav-link">
+                            <span>Career</span>
+                        </a>
+                    </li>
+                    <li class="menu-item menu-item-has-children dropdown nav-item">
+                        <a class="dropdown-toggle nav-link">
+                            <span>Company</span>
+                        </a>
+                        <ul class="dropdown-menu" style="display: none;">
+                            <li class="menu-item nav-item">
+                                <a href="about-us.html" class="dropdown-item nav-link">
+                                    <span>About</span>
+                                </a>
+                            </li>
+                            <li class="menu-item nav-item">
+                                <a href="about-us.html" class="dropdown-item nav-link">
+                                    <span>Events</span>
+                                </a>
+                            </li>
+                            <li class="menu-item nav-item">
+                                <a href="about-us.html" class="dropdown-item nav-link">
+                                    <span>Contact Us</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="dropdown-btn open">
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                    </li>
+                </ul> -->
+            </div>
+        </nav>
+    </div>
+</body>
+  

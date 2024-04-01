@@ -1,0 +1,70 @@
+.abt_us{
+    padding: 130px 30px;
+    position: relative;
+    h1{
+        margin-bottom: 30px;
+    }
+    h1, h2{
+        opacity: 0.9;
+    }
+    .abt_para{
+        margin: 12px 0 0;
+        padding: 0px 30px;
+    }
+    .auto-container, .auto_container{
+        padding: 0px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .outer_cont{
+        position: relative;
+        z-index: 2;
+    }
+    .bubb{
+        opacity: 0.07;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        z-index: 1;
+    }
+    .patt{
+        position: absolute;
+        left: -45px;
+        top: 175px;
+        width: 180px;
+        height: 190px;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+    }
+    .cards{
+        padding-top: 60px;
+        position: relative;
+    }
+    .missin_card{
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0,0,0,.161);
+        padding: 20px;
+        z-index: 2;
+        .card_title{
+            align-items: center;
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+}
+@media (max-width: 767px){
+    .auto-container, .auto_container{
+        padding: 0px 15px !important;
+    }
+    .abt_para{
+        padding: 0px !important;
+    }
+    .patt{
+        display: none;
+    }
+}

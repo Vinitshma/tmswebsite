@@ -1,0 +1,42 @@
+#cr_detail{
+    position: relative;
+    background: #f3f2f2;
+    .bg_top{
+        width: 100%;
+        height: 350px;
+        position: absolute;
+        z-index: 1;
+        .bg_img{
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 350px;
+        }
+    }
+    .auto-container{
+        padding: 210px 10px 50px;
+        z-index: 2;
+        position: relative;
+        .content_inner{
+            padding: 30px 15px;
+            background: white;
+            border-radius: 3px;
+        }
+    }
+    .pos_detail{
+        p{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+    }
+    .pos_heading{
+        opacity: 0.9;
+    }
+    p{
+        margin-bottom: 5px;
+    }
+    .btn:focus{
+        box-shadow: none !important;
+    }
+}

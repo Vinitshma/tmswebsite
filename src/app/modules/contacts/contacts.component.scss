@@ -1,0 +1,56 @@
+.contact_us {
+    position: relative;
+    background: #f3f2f2;
+    .auto-container{
+        padding: 140px 10px 55px;
+    }
+
+    .theme-btn.five {
+        font-size: 17px;
+        padding: 8px 18px;
+        line-height: 1.2 !important;
+        font-weight: 500;
+        text-transform: none;
+        min-width: 0;
+        height: 36px;
+    }
+    .bck_left:after {
+        display: flex;
+        content: "";
+        height: 100%;
+        width: 2500px;
+        background-color: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: -2470px;
+    }
+    h3{
+        line-height: 3.5rem;
+        letter-spacing: -.01em;
+        font-weight: 400;
+        font-size: 2.5rem;
+        &::after {
+            content: " ";
+            background-color: var(--primary-color-one);
+            margin: 50px 0 16px;
+            height: 4px;
+            width: 120px;
+            display: block;
+        }
+    }
+    h6{
+        color: var(--primary-color-one);
+    }
+    form{
+        padding: 20px;
+        background: #fff;
+        border-radius: 12px;
+    }
+    .text-danger, em{
+        font-size: 13px;
+    }
+    input, input[type=text], input[type=email], input[type=number], textarea, select{
+        margin-bottom: 0px;
+    }
+}
