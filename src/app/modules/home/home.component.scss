@@ -151,6 +151,7 @@
         justify-content: space-around;
         flex-wrap: wrap;
         margin-top: 30px;
+        position: relative;
         .card_val_cont{
             flex-basis: 0;
             flex-grow: 1;
@@ -177,9 +178,14 @@
             .cardV_3{
                 background: linear-gradient(180deg,rgba(152,102,255,16%) 0,rgba(152,102,255,8%) 100%);
             }
-            .cardV_1:hover, .cardV_2:hover, .cardV_3:hover{
-                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            .cardV_1, .cardV_2, .cardV_3{
+                box-shadow: -10px 10px 80px rgba(0,0,0,.1);
+                // box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
             }
+            // .cardV_1:hover, .cardV_2:hover, .cardV_3:hover{
+            //     transform: scale(1.1);
+            //     transform-origin: center;
+            // }
             h4{
                 font-size: 20px;
                 text-align: left;
@@ -189,6 +195,34 @@
             }
             p{
                 text-align: left;
+            }
+            .do_nut{
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                left: .2rem;
+                top: 11rem;
+                transition: transform 0.3s ease;
+            }
+            .do_nut:active {
+                transform: rotate(120deg) scale(0.8);
+            }
+        }
+        .timer_s{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            right: 0.2rem;
+            bottom: 3rem;
+            transition: transform 0.3s ease;
+            &:hover{
+                transform: translateX(10px);
+            }
+        }
+
+        @media (max-width: 667px){
+            .timer_s, .do_nut{
+                display: none;
             }
         }
     }
@@ -229,8 +263,8 @@
         border-radius: calc(.25rem - 1px);
         color: #ffffff;
         background-color: #5a5a5a;
-
         &::after{
+            transition: transform 0.4s ease;
             background-image:url(/assets/images/icons/plus.svg);
         }
         &:not(.collapsed){
@@ -238,7 +272,7 @@
             background-color: #5a5a5a;
 
             &::after{
-                transform: rotate(-50deg);
+                transform: rotate(-180deg);
             }
         }
         &:focus{

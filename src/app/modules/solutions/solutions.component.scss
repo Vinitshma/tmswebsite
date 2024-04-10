@@ -1,0 +1,114 @@
+section{
+    padding: 150px 0px 50px;
+    .serv_{
+        color: #007865;
+    }
+    .lead{
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .theme-btn{
+        font-size: 17px;
+        font-weight: 500;
+        text-transform: none;
+        min-width: 0;
+        margin-top: 20px;
+    }
+    .fill-primary-1 {
+        fill: #3e50f7;
+        opacity: 0.1;
+    }
+    .main_con{
+        padding-bottom: 3rem;
+    }
+    .sec_con{
+        padding-top: 2rem;
+        img{
+            width: 50px;
+        }
+        h5{
+            font-weight: 500;
+            font-size: 1.25rem;
+            line-height: 1.3;
+            color: #2c2f3d;
+            font-family: "Roboto Condensed";
+        }
+        h2{
+            font-weight: 600;
+        }
+        .ser_pro{
+            padding-bottom: 3rem;
+        }
+    }
+    .full_con{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        padding-left: 2rem;
+        // background-color: #007865;
+        img{
+            width: 30px;
+        }
+        h5{
+            font-size: 1.7rem;
+            color: #fff;
+        }
+    }
+
+    .satIs_{
+        padding: 50px 0px;
+    }
+
+    .full_comn{
+        // height: 350px;
+        .content_con{
+            position: relative;
+            padding: 10px;
+            border-radius: 14px;
+            overflow: hidden;
+            .unicase{
+                font-weight: 600;
+                font-family: sans-serif;
+            }
+            .image_cover {
+                background-size: cover;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+            .bg_msg{
+                padding: 20px 0px;
+                color: #fff;
+                position: relative;
+                // z-index: 3;
+                h4{
+                    color: #fff;
+                }
+            }
+            h1{
+                color: #fff;
+                a{
+                    position: relative;
+                    transition: 0.3s all;
+                    &:hover:before {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        display: block;
+                        height: 2px;
+                        width:100%;
+                        transition-property: width;
+                        transition-duration: .3s;
+                        transition-timing-function: cubic-bezier(.4,0,.2,1);
+                        content: "";
+                        background: currentcolor;
+                    }
+                }
+            }
+            .xcon{
+                opacity: 0.7;
+            }
+        }
+    }
+}

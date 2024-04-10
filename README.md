@@ -22,3 +22,17 @@
                                 </ul>
                             </li>
                         </ol> -->
+
+
+
+position: absolute;
+    content: ' ';
+    display: block;
+    width: 120%;
+    height: 400px;
+    background-color: #D9BD5B;
+    border-radius: 100%;
+    transform: rotate(-20deg);
+    right: -40%;
+    margin-top: -40px;
+    box-shadow: 0 0 0 25px #f5f6fa, 0 0 0 25.2px var(--app-secondary-color), 0 0 0 50px #f5f6fa, 0 0 0 50.2px var(--app-secondary-color), -100px 280px 0 -180px rgba(217, 189, 91, 1), -135px 460px 0 -90px var(--app-secondary-color);

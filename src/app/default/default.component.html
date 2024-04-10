@@ -27,11 +27,22 @@
                                         <span>Home</span>
                                     </a>
                                 </li>
-                                <li
-                                    class="menu-item nav-item">
-                                    <a routerLink="/product" class="nav-link">
+                                <li id="menu_toggle" class="menu-item menu-item-has-children dropdown nav-item">
+                                    <a class="dropdown-toggle nav-link">
                                         <span>Products</span>
                                     </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="menu-item  nav-item">
+                                            <a class="dropdown-item nav-link">
+                                                <span>Vanigan</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item  nav-item">
+                                            <a routerLink="/pd" class="dropdown-item nav-link">
+                                                <span>Spokeny</span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li
                                     class="menu-item nav-item">
@@ -167,7 +178,6 @@
                                    <li><a  routerLink="/about">About Us</a></li>
                                    <li><a routerLink="/career">Careers</a></li>
                                    <li><a>Events</a></li>
-                                   <li><a>Our Capabilities</a></li>
                                    <li><a routerLink="/contact">Contact Us</a></li>
                                 </ul>
                              </div>
@@ -187,17 +197,17 @@
               <div class="row align-items-center">
                  <div class="col-lg-6 col-md-12 mb-3 mb-lg-0 mb-xl-0">
                     <div class="footer_copy_content color_white">
-                       © 2024 Thirumoolar | All Rights Reserved.
+                       © 2024 Thirumoolar Software | All Rights Reserved.
                     </div>
                  </div>
                  <div class="col-lg-6 col-md-12">
                     <div class="nav_link_v_one text-md-end">
                        <ul>
                           <li>
-                             <a class="color_white" target="_blank" rel="nofollow">Terms Of Use</a>
+                             <a class="color_white" routerLink="/terms">Terms Of Use</a>
                           </li>
                           <li>
-                             <a class="color_white" target="_blank" rel="nofollow">Privacy Policy</a>
+                             <a class="color_white" routerLink="/privacy">Privacy Policy</a>
                           </li>
                        </ul>
                     </div>
@@ -215,24 +225,39 @@
         <nav class="menu-box">
             <div class="close-btn"><i class="fa fa-times"></i></div>
             <div class="menu-outer">
-                <!-- <ul id="myNavbar" class="navbar_nav">
+                <ul id="myNavbar" class="navbar_nav">
                     <li class="menu-item nav-item">
-                        <a routerlink="/home" routerlinkactive="active" class="nav-link active">
+                        <a (click)="navigateTo('/home')" routerlinkactive="active" class="nav-link active">
                             <span>Home</span>
                         </a>
                     </li>
-                    <li class="menu-item nav-item">
-                        <a href="index.html" class="nav-link">
+                    <li class="menu-item menu-item-has-children dropdown nav-item">
+                        <a class="dropdown-toggle nav-link">
                             <span>Products</span>
                         </a>
+                        <ul class="dropdown-menu" style="display: none;">
+                            <li class="menu-item nav-item">
+                                <a class="dropdown-item nav-link">
+                                    <span>Vanigan</span>
+                                </a>
+                            </li>
+                            <li class="menu-item nav-item">
+                                <a (click)="navigateTo('/pd')" class="dropdown-item nav-link">
+                                    <span>Spokeny</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="dropdown-btn open">
+                            <span class="fa fa-angle-down"></span>
+                        </div>
                     </li>
                     <li class="menu-item nav-item">
-                        <a href="index.html" class="nav-link">
+                        <a (click)="navigateTo('/solution')" class="nav-link">
                             <span>Solutions</span>
                         </a>
                     </li>
                     <li class="menu-item nav-item">
-                        <a routerlink="/career" routerlinkactive="active" class="nav-link">
+                        <a (click)="navigateTo('/career')" routerlinkactive="active" class="nav-link">
                             <span>Career</span>
                         </a>
                     </li>
@@ -242,17 +267,17 @@
                         </a>
                         <ul class="dropdown-menu" style="display: none;">
                             <li class="menu-item nav-item">
-                                <a href="about-us.html" class="dropdown-item nav-link">
+                                <a (click)="navigateTo('/about')" class="dropdown-item nav-link">
                                     <span>About</span>
                                 </a>
                             </li>
                             <li class="menu-item nav-item">
-                                <a href="about-us.html" class="dropdown-item nav-link">
+                                <a class="dropdown-item nav-link">
                                     <span>Events</span>
                                 </a>
                             </li>
                             <li class="menu-item nav-item">
-                                <a href="about-us.html" class="dropdown-item nav-link">
+                                <a (click)="navigateTo('/contact')" class="dropdown-item nav-link">
                                     <span>Contact Us</span>
                                 </a>
                             </li>
@@ -261,7 +286,7 @@
                             <span class="fa fa-angle-down"></span>
                         </div>
                     </li>
-                </ul> -->
+                </ul>
             </div>
         </nav>
     </div>

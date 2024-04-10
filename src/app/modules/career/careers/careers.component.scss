@@ -34,7 +34,7 @@
         margin: 0px 20px;
         padding: 20px 6px;
       }
-      button{
+      a{
         padding: 8px 16px;
         font-size: 16px;
         background-color: #005eae;
@@ -59,14 +59,14 @@
         }
         
         .left_container > div {
-          background: var(--primary-color-three);
+          background: #f1f0ec;
           padding: 20px;
           border-radius: 8px;
           cursor: pointer;
           transition: box-shadow 0.5s ease;
-          border: 1px solid #efecec;
+          border: 1px solid #ffffff;
           &:hover{
-            box-shadow: 0 2px 10px 5px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 2px 10px 5px rgba(0, 0, 0, 0.1);
           }
         }
         

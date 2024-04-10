@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-content',
   template:'<router-outlet></router-outlet>'
 })
 export class AppComponent implements OnInit {
-
-  title = 'tms';
 
   ngOnInit(): void { }
 

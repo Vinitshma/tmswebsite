@@ -3,17 +3,28 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { AboutComponent } from './about/about.component';
-import { ProductsComponent } from './products/products.component';
 import { SolutionsComponent } from './solutions/solutions.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { TermsComponent } from './terms/terms.component';
+import { SpokenyComponent } from './products/spokeny/spokeny.component';
+import { VaniganComponent } from './products/vanigan/vanigan.component';
 
 const routes: Routes = [
   {path:'', pathMatch:'full', redirectTo:'home'},
   { path: 'home', component:HomeComponent},
   { path: 'contact', component:ContactsComponent},
   { path: 'about', component:AboutComponent},
-  { path: 'product', component:ProductsComponent},
   { path: 'solution', component:SolutionsComponent},
   { path: 'career', loadChildren: ()=> import('./career/career.module').then(m=>m.CareerModule)},
+  { path: 'privacy', component:PrivacyComponent},
+  { path: 'terms', component:TermsComponent},
+  { path:'pd', 
+    children:[
+      {path:'', pathMatch:'full', redirectTo:'spokeny'},
+      {path:'spokeny', component:SpokenyComponent},
+      {path:'vanigan', component:VaniganComponent}
+    ]
+  }
 ];
 
 @NgModule({

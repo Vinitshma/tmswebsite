@@ -1,6 +1,13 @@
 {
   "name": "tms",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Thirumoolar Application",
+  "author": {
+    "name": "Vinit Sharma",
+    "url": "https://www.linkedin.com/in/vinitshrma"
+  },
+  "homepage": "https://thirumoolarsoft.com",
+  "copyright": "Copyright 2024 Thirumoolar Software",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

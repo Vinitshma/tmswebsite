@@ -1,0 +1,191 @@
+.pd_spok{
+    padding: 130px 0px 30px;
+}
+.banner_con{
+    padding: 22px 0px 40px;
+    p{
+        opacity: 0.7;
+    }
+    .dcs_tr{
+        color: #d0734d;
+        font-weight: 600;
+    }
+    .ban_con{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 32px;
+    }
+}
+.key_con{
+    padding: 50px 0px;
+    h3{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 18px;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 75px;
+            height: 3px;
+            background: var(--primary-color-one);
+            bottom: 18px;
+            display: block;
+        }
+    }
+    h2{
+        line-height: 50px;
+    }
+    .arrow_{
+        position: absolute;
+        right: 14px;
+        top: 58px;
+        rotate: -19deg;
+        animation: arrowAnimation 2s linear infinite;
+    }
+    @keyframes arrowAnimation {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(6%);
+        }
+        // 100% {
+        //   transform: translateX(10%);
+        // }
+      }
+    .container{
+        padding-bottom: 18px;
+    }
+    .key_main{
+        padding: 20px;
+        background: #efede1;
+        border-radius: 2px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        .grid_item {
+            max-width: 235px;
+            // border-right: 1px solid #ccc;
+            box-sizing: border-box;
+            width: 100%;
+            position: relative; 
+            // &:nth-child(3n) {
+            //     border-right: none;
+            // }
+            &:nth-child(3n)::after {
+                // border-right: none;
+                content:none;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: calc(-10% + 10px); /* Adjust position to align with right edge */
+                width: 1px; /* Width of the border */
+                background-color: #c5cfa4; 
+            }
+        }
+    }
+    @media (min-width: 766px) {
+        .container{
+            width: 60%;
+        }
+    }
+    @media (max-width: 767px) {
+        .grid_item::after {
+            // border-right: none;
+            content:none !important;
+        }
+    }
+    @media (max-width: 1060px) {
+        .grid_item::after {
+            right: calc(-20% + 20px);
+        }
+        .grid_item:nth-child(2n)::after {
+            content:none !important;
+        }
+        .arrow_{
+            display: none;
+        }
+    }
+    // .key_main {
+    //     padding: 20px;
+    //     background: #efede1;
+    //     border-radius: 2px;
+    //     display: grid;
+    //     grid-template-columns: repeat(3, 1fr);
+    //     gap: 20px;
+    
+    //     .grid_item {
+    //         max-width: 235px;
+    //     }
+    
+    //     @media (min-width: 766px) {
+    //         .grid_item:nth-child(4) {
+    //             grid-column: 3 / span 1;
+    //             grid-row: 2;
+    //         }
+    //     }
+    
+    //     @media (max-width: 767px) {
+    //         grid-template-columns: 1fr;
+    //     }
+    // }
+    .key_title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        img{
+            width: 35px;
+            height: 35px;
+            border-radius: 15px;
+        }
+    }
+    .border_right{
+        border-right: 2px solid #c5bdbd;
+    }
+}
+
+.wh_spok{
+    padding: 40px 15px 50px;
+    position: relative;
+
+    h3{
+        text-align: center;
+        padding: 11px 0px 35px;
+    }
+    h5{
+        font-family: "Roboto";
+    }
+    .wh_con{
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+
+        .wh_item{
+            max-width: 300px;
+            background: #c6d1c1;
+            z-index: 2;
+            border-radius: 5px;
+            border: 1px solid #bfbfbf;
+            padding: 12px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            img{
+                width: 60px;
+            }
+        }
+
+        .bg_img{
+            position: absolute;
+            opacity: 0.3;
+            rotate: 180deg;
+            height: 300px;
+            width: 100%;
+        }
+    }
+}
